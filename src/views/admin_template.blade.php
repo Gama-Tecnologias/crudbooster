@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <title>{{ ($page_title)?get_setting('appname').': '.strip_tags($page_title):"Admin Area" }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
-    <meta name='generator' content='CRUDBooster {{ \crocodicstudio\crudbooster\commands\CrudboosterVersionCommand::$version }} - Custom version By Gama Tecnologias'/>
+    <meta name='generator' content='CRUDBooster {{ \gamatecnologias\crudbooster\commands\CrudboosterVersionCommand::$version }} - Custom version By Gama Tecnologias'/>
     <meta name='robots' content='noindex,nofollow'/>
     <link rel="shortcut icon"
           href="{{ CRUDBooster::getSetting('favicon')?asset(CRUDBooster::getSetting('favicon')):asset('vendor/crudbooster/assets/logo_crudbooster.png') }}">

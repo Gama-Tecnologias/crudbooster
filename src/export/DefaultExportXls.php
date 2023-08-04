@@ -1,7 +1,7 @@
 <?php
 
 
-namespace crocodicstudio\crudbooster\export;
+namespace gamatecnologias\crudbooster\export;
 
 
 use Illuminate\Contracts\View\View;

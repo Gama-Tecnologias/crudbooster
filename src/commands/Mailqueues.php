@@ -1,7 +1,7 @@
-<?php namespace crocodicstudio\crudbooster\commands;
+<?php namespace gamatecnologias\crudbooster\commands;
 
 use Cache;
-use crocodicstudio\crudbooster\helpers\CRUDBooster;
+use gamatecnologias\crudbooster\helpers\CRUDBooster;
 use DB;
 use Illuminate\Console\Command;
 use Request;

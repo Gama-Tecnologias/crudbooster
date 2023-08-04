@@ -1,6 +1,6 @@
 <?php
 
-namespace crocodicstudio\crudbooster\helpers;
+namespace gamatecnologias\crudbooster\helpers;
 
 use Cache;
 use DB;
@@ -551,7 +551,7 @@ class CRUDBooster
     public static function mainpath($path = null)
     {
 
-        $controllername = str_replace(["\crocodicstudio\crudbooster\controllers\\", "App\Http\Controllers\\"], "", strtok(Route::currentRouteAction(), '@'));
+        $controllername = str_replace(["\gamatecnologias\crudbooster\controllers\\", "App\Http\Controllers\\"], "", strtok(Route::currentRouteAction(), '@'));
         $route_url = route($controllername.'GetIndex');
 
         if ($path) {
@@ -1296,7 +1296,7 @@ class CRUDBooster
 		use DB;
 		use CRUDBooster;
 
-		class Api'.$controller_name.'Controller extends \crocodicstudio\crudbooster\controllers\ApiController {
+		class Api'.$controller_name.'Controller extends \gamatecnologias\crudbooster\controllers\ApiController {
 
 		    function __construct() {    
 				$this->table       = "'.$table_name.'";        
@@ -1384,7 +1384,7 @@ class CRUDBooster
 	use DB;
 	use CRUDBooster;
 
-	class Admin'.$controllername.' extends \crocodicstudio\crudbooster\controllers\CBController {
+	class Admin'.$controllername.' extends \gamatecnologias\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 	    	# START CONFIGURATION DO NOT REMOVE THIS LINE

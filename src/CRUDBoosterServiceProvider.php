@@ -1,12 +1,12 @@
-<?php namespace crocodicstudio\crudbooster;
+<?php namespace gamatecnologias\crudbooster;
 
-use crocodicstudio\crudbooster\commands\CrudboosterVersionCommand;
-use crocodicstudio\crudbooster\commands\Mailqueues;
+use gamatecnologias\crudbooster\commands\CrudboosterVersionCommand;
+use gamatecnologias\crudbooster\commands\Mailqueues;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
-use crocodicstudio\crudbooster\commands\CrudboosterInstallationCommand;
-use crocodicstudio\crudbooster\commands\CrudboosterUpdateCommand;
+use gamatecnologias\crudbooster\commands\CrudboosterInstallationCommand;
+use gamatecnologias\crudbooster\commands\CrudboosterUpdateCommand;
 use Illuminate\Foundation\AliasLoader;
 use App;
 
@@ -65,8 +65,8 @@ class CRUDBoosterServiceProvider extends ServiceProvider
         $loader->alias('PDF', 'Barryvdh\DomPDF\Facade');
         $loader->alias('Excel', 'Maatwebsite\Excel\Facades\Excel');
         $loader->alias('Image', 'Intervention\Image\ImageManagerStatic');
-        $loader->alias('CRUDBooster', 'crocodicstudio\crudbooster\helpers\CRUDBooster');
-        $loader->alias('CB', 'crocodicstudio\crudbooster\helpers\CB');
+        $loader->alias('CRUDBooster', 'gamatecnologias\crudbooster\helpers\CRUDBooster');
+        $loader->alias('CB', 'gamatecnologias\crudbooster\helpers\CB');
     }
    
     private function registerSingleton()

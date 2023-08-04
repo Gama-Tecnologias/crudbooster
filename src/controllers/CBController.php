@@ -1,10 +1,10 @@
-<?php namespace crocodicstudio\crudbooster\controllers;
+<?php namespace gamatecnologias\crudbooster\controllers;
 
 error_reporting(E_ALL ^ E_NOTICE);
 
 
 use CB;
-use crocodicstudio\crudbooster\export\DefaultExportXls;
+use gamatecnologias\crudbooster\export\DefaultExportXls;
 use CRUDBooster;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
