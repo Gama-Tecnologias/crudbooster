@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>{{ ($page_title)?get_setting('appname').': '.strip_tags($page_title):"Admin Area" }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
-    <meta name='generator' content='CRUDBooster {{ \crocodicstudio\crudbooster\commands\CrudboosterVersionCommand::$version }}'/>
+    <meta name='generator' content='CRUDBooster {{ \crocodicstudio\crudbooster\commands\CrudboosterVersionCommand::$version }} - Custom version By Gama Tecnologias'/>
     <meta name='robots' content='noindex,nofollow'/>
     <link rel="shortcut icon"
           href="{{ CRUDBooster::getSetting('favicon')?asset(CRUDBooster::getSetting('favicon')):asset('vendor/crudbooster/assets/logo_crudbooster.png') }}">
@@ -17,8 +17,9 @@
     <link href="{{asset("vendor/crudbooster/ionic/css/ionicons.min.css")}}" rel="stylesheet" type="text/css"/>
     <!-- Theme style -->
     <link href="{{ asset("vendor/crudbooster/assets/adminlte/dist/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset("vendor/crudbooster/assets/adminlte/dist/css/skins/_all-skins.min.css")}}" rel="stylesheet" type="text/css"/>
-
+    <link href="{{ asset("vendor/crudbooster/assets/adminlte/dist/css/skins/_all-skins.min.css")}}" rel="stylesheet" type="text/css"/>    
+    <!-- Custom CSS -->
+    <link href="{{ asset("css/app.css")}}" rel="stylesheet" type="text/css"/>
     <!-- support rtl-->
     @if (in_array(App::getLocale(), ['ar', 'fa']))
         <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
@@ -26,7 +27,7 @@
     @endif
 
     <link rel='stylesheet' href='{{asset("vendor/crudbooster/assets/css/main.css") }}'/>
-
+    <script src="{{ asset("js/customapp.js")}}"></script>
     <!-- load css -->
     <style type="text/css">
         @if($style_css)
@@ -83,7 +84,7 @@
             border: 1px solid #bbbbbb !important;
         }
     </style>
-
+    <script disable-devtool-auto src="{{ asset("js/disable-devtool.js")}}" url='/admin/logout?error=dev'></script>
     @stack('head')
 </head>
 <body class="@php echo (Session::get('theme_color'))?:'skin-blue'; echo ' '; echo config('crudbooster.ADMIN_LAYOUT'); @endphp {{($sidebar_mode)?:''}}">
@@ -205,7 +206,7 @@
 
 
 @include('crudbooster::admin_template_plugins')
-
+<script src="{{ asset("js/customapp.js")}}"></script>
 <!-- load js -->
 @if($load_js)
     @foreach($load_js as $js)
@@ -220,9 +221,9 @@
 </script>
 
 @stack('bottom')
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience -->
+    <audio id="sound_beep" style="display:none;">    
+        <source id="sound_beep_ogg" src="{{ asset("vendor/crudbooster/assets/sound/bell_ring.ogg")}}" type="audio/ogg">
+        <source id="sound_beep_mp3" src="{{ asset("vendor/crudbooster/assets/sound/bell_ring.mp3")}}" type="audio/mpeg">
+    </audio>
 </body>
 </html>

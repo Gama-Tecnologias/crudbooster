@@ -21,11 +21,9 @@
                 var name = $(this).data('name');
                 $('#form-table input[name="button_name"]').val(name);
                 var title = $(this).attr('title');
-
                 swal({
                         title: "{{cbLang("confirmation_title")}}",
-                        text: "{{cbLang("alert_bulk_action_button")}} " + title + " 
-			",
+                        text: "{{cbLang("alert_bulk_action_button")}} " + title,
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#008D4C",
@@ -36,7 +34,6 @@
                     function () {
                         $('#form-table').submit();
                     });
-
             })
 
             $('table tbody tr .button_action a').click(function (e) {
@@ -519,7 +516,7 @@ $total = $result->total();
 
                                         <?php for($i = 0;$i <= 10;$i++):
                                         $select = ($setting->default_paper_size == 'B'.$i) ? "selected" : "";
-                                        ?>
+                                        ?>`
                                         <option <?=$select?> value='B{{$i}}'>B{{$i}}</option>
                                         <?php endfor;?>
                                     </select>

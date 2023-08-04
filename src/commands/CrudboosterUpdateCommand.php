@@ -90,6 +90,7 @@ class CrudboosterUpdateCommand extends Command
 #                                                                                                                       
 			");
         $this->info('--------- :===: Thanks for choosing CRUDBooster :==: ---------------');
+        $this->info('--------- :===: Improved version by Gama tecnologías :==: ---------------');
         $this->info('====================================================================');
     }
 
@@ -180,7 +181,7 @@ class CrudboosterUpdateCommand extends Command
     {
         $this->info('--');
         $this->info('Homepage : http://www.crudbooster.com');
-        $this->info('Github : https://github.com/crocodic-studio/crudbooster');
+        $this->info('Github : https://github.com/Gama-Tecnologias/crudbooster');
         $this->info('Documentation : https://github.com/crocodic-studio/crudbooster/blob/master/docs/en/index.md');
         $this->info('====================================================================');
         if ($success == true) {

@@ -65,7 +65,7 @@ class CrudboosterInstallationCommand extends Command
                 $this->call('optimize');
             }
 
-            $this->info('Installing CRUDBooster Is Completed ! Thank You :)');
+            $this->info('Installing CRUDBooster by Gama Is Completed ! Thank You :)');
         } else {
             $this->info('Setup Aborted !');
             $this->info('Please setting the database configuration for first !');
@@ -85,6 +85,7 @@ class CrudboosterInstallationCommand extends Command
 #                                                                                                                       
 			");
         $this->info('--------- :===: Thanks for choosing CRUDBooster :==: ---------------');
+        $this->info('--------- :===: Improved version by Gama tecnologías :==: ---------------');
         $this->info('====================================================================');
     }
 
@@ -178,7 +179,7 @@ class CrudboosterInstallationCommand extends Command
     {
         $this->info('--');
         $this->info('Homepage : http://www.crudbooster.com');
-        $this->info('Github : https://github.com/crocodic-studio/crudbooster');
+        $this->info('Github : https://github.com/Gama-Tecnologias/crudbooster');
         $this->info('Documentation : https://github.com/crocodic-studio/crudbooster/blob/master/docs/en/index.md');
         $this->info('====================================================================');
         if ($success == true) {

@@ -12,13 +12,10 @@
             <div class="pull-{{ cbLang('left') }} info">
                 <p>{{ CRUDBooster::myName() }}</p>
                 <!-- Status -->
-                <a href="#"><i class="fa fa-circle text-success"></i> {{ cbLang('online') }}</a>
             </div>
         </div>
 
-
         <div class='main-menu'>
-
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                 <li class="header">{{cbLang("menu_navigation")}}</li>

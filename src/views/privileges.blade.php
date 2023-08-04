@@ -1,16 +1,9 @@
 @extends('crudbooster::admin_template')
-
 @section('content')
-
     <div style="width:750px;margin:0 auto ">
-
-
         @if(CRUDBooster::getCurrentMethod() != 'getProfile')
             <p><a href='{{CRUDBooster::mainpath()}}'>{{cbLang("form_back_to_list",['module'=>CRUDBooster::getCurrentModule()->name])}}</a></p>
     @endif
-
-
-
     <!-- Box -->
         <div class="box box-primary">
             <div class="box-header with-border">
@@ -48,6 +41,7 @@
                             <option value=''>{{cbLang('chose_theme_color_select')}}</option>
                             <?php
                             $skins = array(
+                                'skin-custom-gama',
                                 'skin-blue',
                                 'skin-blue-light',
                                 'skin-yellow',
