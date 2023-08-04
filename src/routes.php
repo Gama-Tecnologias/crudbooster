@@ -1,5 +1,5 @@
 <?php
 
-use crocodicstudio\crudbooster\helpers\CBRouter;
+use gamatecnologias\crudbooster\helpers\CBRouter;
 
 CBRouter::route();
