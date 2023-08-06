@@ -34,7 +34,8 @@ class CRUDBoosterServiceProvider extends ServiceProvider
             $this->publishes([__DIR__.'/userfiles/controllers/AdminCmsUsersController.php' => app_path('Http/Controllers/AdminCmsUsersController.php')],'cb_user_controller');
             $this->publishes([__DIR__.'/assets'=>public_path('vendor/crudbooster')],'cb_asset');
             $this->publishes([__DIR__.'/userfiles/new_webpack.mix.js'=>base_path('new_webpack.mix.js')]);
-            $this->publishes([__DIR__.'/userfiles/public'=>resource_path()]);
+            $this->publishes([__DIR__.'/userfiles/public/css/skin-custom-gama.css'=>resource_path('css/skin-custom-gama.css')]);
+            $this->publishes([__DIR__.'/userfiles/public/js/customapp.js'=>resource_path('js/customapp.js')]);
         }
 
         $this->customValidation();
