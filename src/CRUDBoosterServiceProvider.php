@@ -32,10 +32,10 @@ class CRUDBoosterServiceProvider extends ServiceProvider
             $this->publishes([__DIR__.'/configs/crudbooster.php' => config_path('crudbooster.php')],'cb_config');
             $this->publishes([__DIR__.'/userfiles/controllers/CBHook.php' => app_path('Http/Controllers/CBHook.php')],'CBHook');
             $this->publishes([__DIR__.'/userfiles/controllers/AdminCmsUsersController.php' => app_path('Http/Controllers/AdminCmsUsersController.php')],'cb_user_controller');
-            $this->publishes([__DIR__.'/assets'=>public_path('vendor/crudbooster')],'cb_asset');
-            $this->publishes([__DIR__.'/userfiles/new_webpack.mix.js'=>base_path('new_webpack.mix.js')],'cb_asset');
-            $this->publishes([__DIR__.'/userfiles/public/css/skin-custom-gama.css'=>base_path('resource/css/skin-custom-gama.css')],'cb_asset');
-            $this->publishes([__DIR__.'/userfiles/public/js/customapp.js'=>base_path('resource/js/customapp.js')],'cb_asset');
+            $this->publishes([__DIR__.'/assets'=> public_path('vendor/crudbooster')],'cb_asset');
+            $this->publishes([__DIR__.'/userfiles/new_webpack.mix.js'=> base_path('new_webpack.mix.js')],'cb_asset');
+            $this->publishes([__DIR__.'/userfiles/skin-custom-gama.css'=> base_path('resource/css/skin-custom-gama.css')],'cb_asset');
+            $this->publishes([__DIR__.'/userfiles/customapp.js'=> base_path('resource/js/customapp.js')],'cb_asset');
         }
 
         $this->customValidation();
